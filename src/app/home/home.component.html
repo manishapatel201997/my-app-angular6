@@ -1,0 +1,66 @@
+<html lang="en">
+<head>
+  <title>Bootstrap Card</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+</head>
+<body> 
+ 
+<div class="container">
+  <div class="card-deck">
+    <div class="card">
+      <div class="card-body text-center">
+        <h2>HOME</h2>
+        <h3>{{title}}</h3>
+<!-- 
+        <button 
+          class="btn btn-lg btn-success mt-4 mb-4"
+          (click)="setFlagValueToTrue()">Display Conditional Message</button>
+ -->    
+        <button 
+          class="btn btn-lg btn-success mt-4 mb-4"
+          (click)="setFlagValue()">{{btnText}}</button>
+
+  
+
+        <div *ngIf="test_bool">
+          <h1>This is true boolean value</h1>
+        </div>
+
+        <ul class="list-group">
+          <li 
+            *ngFor="let user of users"
+            class="list-group-item">
+            <div [ngSwitch]="user.name">  
+              <div *ngSwitchCase="'Manisha '">  
+                <h3 class="text-secondary">{{user.name}}</h3>
+                <h3 class="text-secondary">{{user.city}}</h3>
+                <div [ngSwitch]="user.age">
+                  <h3 class="text-secondary" *ngSwitchCase="20">{{user.age}}</h3>
+                  <h3 class="text-secondary" *ngSwitchCase="10">{{user.age}}</h3>
+                  <h3 class="text-secondary" *ngSwitchDefault>{{user.age}}</h3>  
+                </div>
+                <h3 class="text-secondary">{{user.college}}</h3>
+                <img src="{{user.profile_image}}">
+              </div>
+            </div>
+          </li>
+        </ul>
+      
+
+        <div class="row">
+          <div class="col-6">
+          <app-home-left></app-home-left>
+          </div>
+          <div class="col">
+            <app-home-right></app-home-right>
+          </div>
+       </div>
+     </div>
+    </div>
+</div>
+</div>
+</body>
+</html>
+

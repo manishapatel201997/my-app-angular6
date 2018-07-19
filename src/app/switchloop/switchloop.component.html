@@ -1,0 +1,84 @@
+<div class="container">
+  <div class="card-deck">
+    <div class="card bg-info text-center">
+      <ul class="list-group">
+        <li class="list-group-item"
+        *ngFor="let info of infos">
+
+        <div [ngSwitch]="info.name">
+          <div *ngSwitchCase ="'Manu'">
+            <h6>{{info.name}}</h6>
+            <h6>{{info.city}}</h6>
+            <h6>{{info.rollno}}</h6>
+            <h6>{{info.collage}}</h6>
+          </div>
+          <div *ngSwitchCase = "'Kratika'">
+            <h6>{{info.name}}</h6>
+            <h6>{{info.city}}</h6>
+          </div>
+          <div *ngSwitchCase = "'Bharti'">
+            <h6>{{info.name}}</h6>
+            <h6>{{info.city}}</h6>
+          </div>
+          <div *ngSwitchCase = "'Rashmi'">
+            <h6>{{info.name}}</h6>
+            <h6>{{info.city}}</h6>
+          </div>
+          <div *ngSwitchCase = "'Sushma'">
+            <h6>{{info.name}}</h6>
+            <h6>{{info.city}}</h6>
+          </div>
+          <div *ngSwitchCase = "'Ekta'">
+            <h6>{{info.name}}</h6>
+            <h6>{{info.city}}</h6>
+          </div>
+          <div *ngSwitchCase = "'Deepak'">
+            <h6>{{info.name}}</h6>
+            <h6>{{info.city}}</h6>
+          </div>
+
+        </div>
+      </li>
+    </ul>
+    <ul class="list-group">
+      <li class="list-group-item"
+      *ngFor="let info of infos">
+
+      <div [ngSwitch]="info.city">
+        <div *ngSwitchCase ="'Panna'">
+          <h6>{{info.name}}</h6>
+          <h6>{{info.city}}</h6>
+          <h6>{{info.rollno}}</h6>
+          <h6>{{info.collage}}</h6>
+        </div>
+        <div *ngSwitchCase = "'Narshinhgad'">
+          <h6>{{info.name}}</h6>
+          <h6>{{info.city}}</h6>
+          <h6>{{info.rollno}}</h6>
+          <h6>{{info.collage}}</h6>
+        </div>
+        <div *ngSwitchCase = "'Hatta'">
+          <h6>{{info.name}}</h6>
+          <h6>{{info.city}}</h6>
+          <h6>{{info.rollno}}</h6>
+          <h6>{{info.collage}}</h6>
+        </div>
+        <div *ngSwitchCase = "'Damoh'">
+          <h6>{{info.name}}</h6>
+          <h6>{{info.city}}</h6>
+          <h6>{{info.rollno}}</h6>
+          <h6>{{info.collage}}</h6>
+        </div>
+        <div *ngSwitchCase = "'Chindwada'">
+          <h6>{{info.name}}</h6>
+          <h6>{{info.city}}</h6>
+          <h6>{{info.rollno}}</h6>
+          <h6>{{info.collage}}</h6>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+</div>
+
+</div>
